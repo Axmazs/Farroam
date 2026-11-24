@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dthm730u2aj6k"]
+
+[ext_resource type="PackedScene" uid="uid://cu38gvjyun6wv" path="res://ai scripts/ship.tscn" id="1_uco4h"]
+[ext_resource type="Script" uid="uid://chii7m530a4j3" path="res://ai scripts/freighter_ai.gd" id="2_to1w3"]
+
+[node name="ship" unique_id=452209285 instance=ExtResource("1_uco4h")]
+
+[node name="Job" parent="ShipAI" parent_id_path=PackedInt32Array(1123572800) index="0" unique_id=280760905]
+script = ExtResource("2_to1w3")

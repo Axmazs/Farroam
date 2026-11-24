@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://lobb7eo4108e"]
+
+[ext_resource type="Script" uid="uid://c23bloa17cvun" path="res://units/station_ai.gd" id="1_nip8r"]
+
+[node name="station" type="Node" unique_id=1069264332]
+script = ExtResource("1_nip8r")
+
+[node name="Job" type="Node" parent="." unique_id=1354582187]

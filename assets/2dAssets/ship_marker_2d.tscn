@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://v65fghlt8ks0"]
+
+[ext_resource type="Texture2D" uid="uid://cnf0pf3xf630b" path="res://assets/2dAssets/testshipicon(1).png" id="1_c1sr6"]
+[ext_resource type="Script" uid="uid://g2a6ebhcmgkx" path="res://assets/2dAssets/ship_marker_2d.gd" id="1_wbo18"]
+
+[node name="ShipMarker2D" type="Node2D" unique_id=71416892]
+script = ExtResource("1_wbo18")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=478247525]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_c1sr6")

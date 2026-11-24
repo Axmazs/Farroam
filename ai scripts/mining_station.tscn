@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bjasxkr4o7k1c"]
+
+[ext_resource type="PackedScene" uid="uid://lobb7eo4108e" path="res://ai scripts/station.tscn" id="1_urf3s"]
+[ext_resource type="Script" uid="uid://bc0kw7n3ed7w0" path="res://ai scripts/mining_station_ai.gd" id="2_oq2f3"]
+
+[node name="MiningStation" unique_id=1069264332 instance=ExtResource("1_urf3s")]
+
+[node name="Job" parent="." index="0" unique_id=1354582187]
+script = ExtResource("2_oq2f3")

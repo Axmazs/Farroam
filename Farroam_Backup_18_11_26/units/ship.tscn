@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cu38gvjyun6wv"]
+
+[ext_resource type="Script" uid="uid://i54jhssmnvpr" path="res://ai scripts/ship.gd" id="1_fxxjp"]
+[ext_resource type="Script" uid="uid://dgdm0ekoyh261" path="res://ai scripts/ship_ai.gd" id="2_aa665"]
+[ext_resource type="Script" uid="uid://dfbc7si4ttj00" path="res://ai scripts/ship_data.gd" id="2_ojedk"]
+[ext_resource type="Script" uid="uid://b0ugir01r64kp" path="res://ai scripts/ship_2d_map.gd" id="4_b3vpf"]
+[ext_resource type="Script" uid="uid://cg7y4pha5lsow" path="res://ai scripts/ship_no_map.gd" id="5_ditfx"]
+
+[sub_resource type="Resource" id="Resource_c1dve"]
+script = ExtResource("2_ojedk")
+metadata/_custom_type_script = "uid://dfbc7si4ttj00"
+
+[node name="ship" type="Node" unique_id=452209285]
+script = ExtResource("1_fxxjp")
+data = SubResource("Resource_c1dve")
+
+[node name="ShipAI" type="Node" parent="." unique_id=1123572800]
+script = ExtResource("2_aa665")
+
+[node name="Job" type="Node" parent="ShipAI" unique_id=280760905]
+
+[node name="Mode2D" type="Node" parent="ShipAI" unique_id=821332]
+script = ExtResource("4_b3vpf")
+
+[node name="ModeNoMap" type="Node" parent="ShipAI" unique_id=616462463]
+script = ExtResource("5_ditfx")
+
+[node name="arrivalTimer" type="Timer" parent="ShipAI/ModeNoMap" unique_id=2041763279]

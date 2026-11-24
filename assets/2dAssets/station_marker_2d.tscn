@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dk0ybh8b2scp7"]
+
+[ext_resource type="Texture2D" uid="uid://br0fat3tis2gr" path="res://assets/2dAssets/teststationicon.png" id="1_8c6ak"]
+
+[node name="StationMarker2D" type="Node2D" unique_id=98131010]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2091533692]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_8c6ak")

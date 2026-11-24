@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b6nn4h22ue0fm"]
+
+[ext_resource type="Texture2D" uid="uid://c2hedamusfvws" path="res://assets/2dAssets/SectorBorderSprite.png" id="1_47f2u"]
+[ext_resource type="Script" uid="uid://qp3qpwebq8im" path="res://2D_Map/map_2d.gd" id="1_jjebx"]
+[ext_resource type="PackedScene" uid="uid://dthm730u2aj6k" path="res://units/freighter.tscn" id="2_i63hu"]
+[ext_resource type="PackedScene" uid="uid://cbojfskuri7d4" path="res://assets/2dAssets/freighter_marker.tscn" id="3_ju2im"]
+[ext_resource type="Script" uid="uid://cd7t1e0xewcb0" path="res://2D_Map/camera_2d.gd" id="3_meifh"]
+[ext_resource type="PackedScene" uid="uid://c5fgrmhndr13u" path="res://assets/2dAssets/depot_marker_2d.tscn" id="4_2halm"]
+[ext_resource type="PackedScene" uid="uid://7bypqrijj3b2" path="res://assets/2dAssets/mining_station_marker_2d.tscn" id="5_kguww"]
+
+[node name="map_2d" type="Node2D" unique_id=1297135554]
+script = ExtResource("1_jjebx")
+freighter_scene = ExtResource("2_i63hu")
+freighter_marker_scene = ExtResource("3_ju2im")
+depot_scene = ExtResource("4_2halm")
+mining_station_scene = ExtResource("5_kguww")
+raider_scene = ExtResource("5_kguww")
+raider_count = 0
+
+[node name="SectorBorderSprite" type="Sprite2D" parent="." unique_id=1267884238]
+position = Vector2(574, 341)
+scale = Vector2(10, 10)
+texture = ExtResource("1_47f2u")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=591126417]
+script = ExtResource("3_meifh")

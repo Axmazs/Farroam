@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://c5fgrmhndr13u"]
+
+[ext_resource type="PackedScene" uid="uid://dk0ybh8b2scp7" path="res://assets/2dAssets/station_marker_2d.tscn" id="1_cuvgk"]
+
+[node name="StationMarker2D" unique_id=98131010 groups=["depot_stations"] instance=ExtResource("1_cuvgk")]

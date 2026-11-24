@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b6nn4h22ue0fm"]
+
+[ext_resource type="Script" uid="uid://qp3qpwebq8im" path="res://2D_Map/map_2d.gd" id="1_mqeov"]
+[ext_resource type="PackedScene" uid="uid://klnfxrel6vco" path="res://2D_Map/sector_generator.tscn" id="2_mtixe"]
+[ext_resource type="Script" uid="uid://vfkgw0tvc462" path="res://2D_Map/sector_camera_2d.gd" id="9_2halm"]
+
+[node name="map_2d" type="Node2D" unique_id=1297135554]
+script = ExtResource("1_mqeov")
+sector_generator_scene = ExtResource("2_mtixe")
+sector_count = 6
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=591126417]
+script = ExtResource("9_2halm")

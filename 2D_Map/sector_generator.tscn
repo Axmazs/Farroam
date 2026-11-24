@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://klnfxrel6vco"]
+
+[ext_resource type="Script" uid="uid://dimk4cs74y7ib" path="res://2D_Map/sector_generator.gd" id="1_85bd2"]
+[ext_resource type="Script" uid="uid://c4q0at7nvulu4" path="res://2D_Map/sector_data.gd" id="2_5o8yc"]
+[ext_resource type="Script" uid="uid://cv4pxr5ybh8qp" path="res://2D_Map/2d_sector_station_generation.gd" id="2_85bd2"]
+[ext_resource type="Script" uid="uid://dhhk1lgg8g1hh" path="res://2D_Map/2d_sector_ship_generation.gd" id="3_wxlxd"]
+[ext_resource type="PackedScene" uid="uid://d3gj4kje4onst" path="res://ai scripts/depot.tscn" id="4_qd2qk"]
+[ext_resource type="PackedScene" uid="uid://c5fgrmhndr13u" path="res://assets/2dAssets/depot_marker_2d.tscn" id="5_r4jky"]
+[ext_resource type="PackedScene" uid="uid://bjasxkr4o7k1c" path="res://ai scripts/mining_station.tscn" id="6_8m8f1"]
+[ext_resource type="PackedScene" uid="uid://7bypqrijj3b2" path="res://assets/2dAssets/mining_station_marker_2d.tscn" id="7_fl2gr"]
+[ext_resource type="PackedScene" uid="uid://dthm730u2aj6k" path="res://ai scripts/freighter.tscn" id="9_sfgqg"]
+[ext_resource type="PackedScene" uid="uid://cbojfskuri7d4" path="res://assets/2dAssets/freighter_marker.tscn" id="10_3ncvy"]
+
+[sub_resource type="Resource" id="Resource_85bd2"]
+script = ExtResource("2_5o8yc")
+metadata/_custom_type_script = "uid://c4q0at7nvulu4"
+
+[node name="SectorGenerator" type="Node" unique_id=1393422635]
+script = ExtResource("1_85bd2")
+data = SubResource("Resource_85bd2")
+mining_station_count = 3
+depot_count = 6
+freighter_count = 6
+
+[node name="Stations" type="Node" parent="." unique_id=1060451546]
+script = ExtResource("2_85bd2")
+depot_scene = ExtResource("4_qd2qk")
+depot_marker_scene = ExtResource("5_r4jky")
+mining_station_scene = ExtResource("6_8m8f1")
+mining_station_marker_scene = ExtResource("7_fl2gr")
+
+[node name="Ships" type="Node" parent="." unique_id=1444652798]
+script = ExtResource("3_wxlxd")
+freighter_scene = ExtResource("9_sfgqg")
+freighter_marker_scene = ExtResource("10_3ncvy")
